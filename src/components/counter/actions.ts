@@ -1,3 +1,6 @@
+/**
+ * This method is a state transition pipeline and allows developers to define custom overrides.
+ */
 export function doBeforeCounterInc(_evt: any) {
 	return async (_getState: any, _dispatch: any, transition: any) => {
 		transition({
@@ -6,6 +9,9 @@ export function doBeforeCounterInc(_evt: any) {
 	};
 }
 
+/**
+ * This method dispatches an INCREMENT trigger to the reducer state
+ */
 export function doCounterInc(_evt: any) {
 	return async (_getState: any, dispatch: any, transition: any) => {
 		dispatch({
@@ -17,6 +23,9 @@ export function doCounterInc(_evt: any) {
 	};
 }
 
+/**
+ * This method dispatches a DECREMENT trigger to the reducer state
+ */
 export function doCounterDec(_evt: any) {
 	return async (_: any, dispatch: any, transition: any) => {
 		dispatch({
